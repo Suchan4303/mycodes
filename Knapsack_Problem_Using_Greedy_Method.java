@@ -13,17 +13,17 @@ public class Knapsack_Problem_Using_Greedy_Method {
 		System.out.println("\nEnter Weights:");
 		for(i=0;i<n;i++) 
 			w[i] = sc.nextFloat();
-			System.out.println("\nEnter Profits:");
+		System.out.println("\nEnter Profits:");
 		for(i=0;i<n;i++) 
 			p[i]=sc.nextFloat();
-			System.out.println("\nEnter KnapSack Size:");
-			m=sc.nextInt();
-			for(i=0;i<n;i++) 
+		System.out.println("\nEnter KnapSack Size:");
+		m=sc.nextInt();
+		for(i=0;i<n;i++) 
 			c[i]=p[i]/w[i];
-			for(i=0;i<n;i++) 
-			{
-			for(j=0;j<n-1;j++)
-			{
+		for(i=0;i<n;i++) 
+		{
+		for(j=0;j<n-1;j++)
+		{
 			if(c[j]<c[j+1]) 
 			{
 				temp=c[j];
@@ -36,14 +36,14 @@ public class Knapsack_Problem_Using_Greedy_Method {
 				p[j]=p[j+1];
 				p[j+1]=temp;
 			}
-			}
-			}
-			System.out.println("\nThe Items are Arranged as...\n");
-			System.out.println("\n\nItems\tWeights\tProfits");
-			for(i=0;i<n;i++)
-			System.out.println("\nx["+i+"]\t"+w[i]+"\t"+p[i]);
-			knapsack(n,m,w,p);
-			}
+		}
+	}
+	System.out.println("\nThe Items are Arranged as...\n");
+	System.out.println("\n\nItems\tWeights\tProfits");
+	for(i=0;i<n;i++)
+		System.out.println("\nx["+i+"]\t"+w[i]+"\t"+p[i]);
+	knapsack(n,m,w,p);
+}
 public static void knapsack(int n,float m,float w[],float p[])
 {
 	float x[]=new float[15];
