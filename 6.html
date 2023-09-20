@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scrolling Text Example</title>
+</head>
+<body>
+<button onclick="startScroll()">Start Scrolling</button>
+<div id="Scrolling-Text" style="white-space:nowrap;overflow:hidden;"></div>
+<script>
+function startScroll() {
+  let scrollingText = document.getElementById("Scrolling-Text");
+  scrollingText.innerText = "This is some scrolling text that moves from left to right with a small delay";
+  scrollingText.style.animation = "scroll 10s linear infinite";
+}
+</script>
+<style>
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+</style>
+</body>
+</html>
